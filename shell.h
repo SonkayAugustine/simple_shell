@@ -10,14 +10,16 @@
 /* delete when functions are built */
 #include <string.h>
 /* end delete when functions are built */
-#define BUFSIZE 1024 extern char **environ;
+#define BUFSIZE 1024
+extern char **environ;
 /**
  * struct environ_type - linked list from PATH
  * @str: path in the format /usr/bin
  * @len: length of the string
  * @next: points to the next node
  */
-typedef struct environ_type {
+typedef struct environ_type
+{
 char *str;
 unsigned int len;
 struct environ_type *next;
@@ -27,7 +29,8 @@ struct environ_type *next;
  * @cmd_str: commands (env, cd, alias, history)
  * @fun: function
  */
-typedef struct builtin_commands {
+typedef struct builtin_commands
+{
 char *cmd_str;
 int (*fun)();
 } builtin_cmds_t;
