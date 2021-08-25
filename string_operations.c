@@ -90,3 +90,5 @@ break;
 }
 if (sign > 0)
 result *= -1;
+return (result);
+}

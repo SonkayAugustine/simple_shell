@@ -2,12 +2,20 @@
 /**
  * is_builtin - checks if cmd is a builtin
  * @cmd: command to find
- * Return: On success - pointer to function, On Failure - NULL pointer (* other useful shell builtins: (* pwd, echo, pushd, popd, type (* * requires ^Z (* fg, bg (* * Requires ^R (* reverse-i-search **HISTORY**
+ * Return:  pointer to function,otherwise - NULL pointer
+ * (* other useful shell builtins:
+ * (* pwd, echo, pushd, popd,
+ * type (* * requires ^Z (* fg, bg
+ * (* * Requires ^R (* reverse-i-search **HISTORY**
  */
 int (*is_builtin(char *cmd))()
 {
 unsigned int i;
-builtin_cmds_t builds[] = { {"alias", _alias}, {"cd", _cd}, {"env", _env}, {"exit", _exit_with_grace}, {"history", _history}, {"setenv", _setenv_usr}, {"bowie", bowie}, {NULL, NULL} };
+builtin_cmds_t builds[] = {
+{"alias", _alias}, {"cd", _cd}, {"env", _env},
+{"exit", _exit_with_grace}, {"history", _history},
+{"setenv", _setenv_usr}, {"bowie", bowie},
+{NULL, NULL} };
 i = 0;
 while (*builds[i].fun != NULL)
 {
@@ -58,7 +66,8 @@ return (-1);
 int _env(char **tokens, env_t *environment)
 {
 char **envir;
-if (tokens[1]) simple_print("No arguments are necessary\n");
+if (tokens[1])
+simple_print("No arguments are necessary\n");
 envir = environ;
 if (!envir || !environ)
 return (-1);
@@ -72,7 +81,9 @@ return (0);
 }
 /**
  * _cd - changes working directory
- * @tokens: argument list * Return: 0 on success */
+ * @tokens: argument list
+ * Return: 0 on success
+ */
 int _cd(char **tokens)
 {
 char *target;
@@ -85,14 +96,18 @@ if (tokens[1][0] == '~' && !tokens[1][1])
 target = home;
 else if (tokens[1][0] == '-' && !tokens[1][1])
 target = _getenv("OLDPWD");
-else target = tokens[1];
+else
+target = tokens[1];
 }
-else target = home;
+else
+target = home;
 if (target == home)
 chdir(target);
-else if (access(target, F_OK | R_OK) == 0)
+else if
+(access(target, F_OK | R_OK) == 0)
 chdir(target);
-else simple_print("Could not find directory\n");
+else
+simple_print("Could not find directory\n");
 setenv("OLDPWD", _getenv("PWD"), 1);
 setenv("PWD", getcwd(pwd, sizeof(pwd)), 1);
 return (0);
