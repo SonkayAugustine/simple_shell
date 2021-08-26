@@ -57,6 +57,7 @@ tokenized[i] = token = _strtok_r(NULL, delimit, &saveptr);
 return (tokenized);
 }
 
+unsigned char sig_flag = 0;
 /**
  * sighandler - handles signals from keyboard interrupts
  * @sig: the signal caught
