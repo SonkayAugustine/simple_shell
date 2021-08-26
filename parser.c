@@ -56,10 +56,7 @@ for (i = 1; token; i++)
 tokenized[i] = token = _strtok_r(NULL, delimit, &saveptr);
 return (tokenized);
 }
-/*
- Global variable: Flag, to handle interrupt signals
- */
-unsigned char sig_flag = 0;
+
 /**
  * sighandler - handles signals from keyboard interrupts
  * @sig: the signal caught

@@ -10,7 +10,10 @@ unsigned int i, wc, flag;
 char *delims = "\n \t";
 for (i = 0, wc = 1, flag = 0; str[i]; i++)
 {
-if (flag == 0 && (str[i] == delims[0] || str[i] == delims[1] || str[i] == delims[2]) && str[i + 1] != delims[0] && str[i + 1] != delims[1] && str[i + 1] != delims[2])
+if (flag == 0 && (str[i] == delims[0] ||
+str[i] == delims[1] || str[i] == delims[2])
+&& str[i + 1] != delims[0] &&
+str[i + 1] != delims[1] && str[i + 1] != delims[2])
 flag = 1, wc++;
 else
 flag = 0;

@@ -16,7 +16,7 @@ for (i = 0; env[i]; i++)
 for (len = 0; env[i][len] != '='; len++)
 ;
 len++;
-tmp = malloc((len) * sizeof(char));
+tmp = malloc((len) *sizeof(char));
 _memcpy(tmp, env[i], len - 1);
 tmp[len - 1] = '\0';
 if (_strncmp((char *)name, tmp, _strlen(tmp)) == 0)
