@@ -213,7 +213,7 @@ Once in The shell you can interact with it in a number of ways.
 
 
 
-[![Sonkay Conteh[(https://avatars.githubusercontent.com/u/51463111?v=4)](https://github.com/SonkayAugustine/) | [![Tosin Adewale]( https://avatars.githubusercontent.com/u/84603888?v=4)](https://github.com/Tosmel2/)
+[![Sonkay Conteh](https://avatars.githubusercontent.com/u/51463111?v=4)](https://github.com/SonkayAugustine/) | [![Tosin Adewale]( https://avatars.githubusercontent.com/u/84603888?v=4)](https://github.com/Tosmel2/)
 
 :---:|:---:
 
