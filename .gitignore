@@ -1,7 +1,20 @@
-~*
-*.swp
-a.out
-*.bkup
-hsh
-_betty-d
-_betty-s
+# Ignore all
+*
+# Unignore all with extensions
+!*.*
+# Unignore all dirs
+!*/
+# Ignore emacs autosave~ and #modified#
+files
+*~
+**/*~
+#*
+**/\#*
+# Ignore main files
+**/*main.c
+# Ignore object files and libraries
+*.o
+*.ko
+# ignore _putchar.c and a.out
+**/_putchar.c
+**/a.out

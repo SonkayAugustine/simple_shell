@@ -1,47 +1,150 @@
-.TH man 1 "20 August 2021" "0.01" "hsh man page"
+.TH "ALX SHELL" 1 "2021 AUG 23" LOCAL "ALX SCHOOL COHORT 3"
+
+
 
 .SH NAME
 
-.B hsh
-
-- Holberton SHell
+Simple Shell \- a simple UNIX command interpreter (shell) built as an end of term project for Holberton School
 
 .SH SYNOPSIS
 
-.B hsh
+.B Simple
 
-[No options yet]
+[command_string | file]
 
 .SH DESCRIPTION
 
-.B hsh
+.B Simple Shell
 
-is a simple interactive command interpreter. It executes commands read from the standard input. hsh is not fully featured. It can only handle simple commands in the form: "<command> [options]"
+is an \fBsh\fR-compatible command language interpreter that executes limited commands read from the standard input.
 
-.SH BUILTIN COMMANDS
+.PP
 
-.B cd
+.B Simple Shell
 
-- changes the working directory.
+is \fBnot\fR intended to be a \fBfully\fR conformant implementation of the Shell and Utilities portion of the IEEE POSIX specification (IEEE Standard 1003.1).
 
-.B env
+.SH DEFINITIONS
 
-- print the environment
+.PP
 
-.B exit
+The following definitions are used throughout the rest of this
 
-- exit the shell gracefully.
+document.
 
-.B setenv
+.PD 0
 
-- set an environmental variable.
+.TP
 
-.SH BUGS
+.B blank
 
-There are currently a ton of bugs in this code. If any bugs are found, please contact <zamanisonkay@gmail.com>
+A space or tab.
 
-.SH AUTHORS
+.TP
 
-Sonkay Conteh<zamanisonkay@gmail.com>
+.B word
 
-Tosin Adewale<Adewaletosin0808@gmail.com>
+A sequence of characters considered as a single unit by the shell.
+
+Also known as a
+
+.BR token .
+
+.TP
+
+.B name
+
+A
+
+.I word
+
+consisting only of alphanumeric characters and underscores, and
+
+beginning with an alphabetic character or an underscore. Also
+
+referred to as an
+
+.BR identifier .
+.TP
+
+.B metacharacters and control operators
+
+Simple Shell only recognizes the following:
+
+A character that, when unquoted, separates words. One of the following:
+
+.br
+
+.RS
+
+.PP
+
+.if t \fBspace tab\fP
+
+.if n \fBspace tab\fP
+
+.RE
+
+.PP
+
+.TP
+
+.B control operator
+
+A \fItoken\fP that performs a control function. It is one of the following
+
+symbols:
+
+.RS
+
+.PP
+
+.if t \fB<newline>\fP
+
+.if n \fB<newline>\fP
+
+.RE
+
+.PD
+
+.SH "'SIMPLE COMMANDS ONLY,' SAYS SIMPLE SHELL"
+
+.PP
+
+A \fIsimple command\fP is a sequence of optional variable assignments
+
+followed by \fBblank\fP-separated words and redirections, and
+
+terminated by a \fIcontrol operator\fP. The first word
+
+specifies the command to be executed, and is passed as argument zero.
+
+The remaining words are passed as arguments to the invoked command.
+
+.PP
+
+.SH "COMMAND EXECUTION"
+
+After a command has been split into words, if it results in a
+
+simple command and an optional list of arguments, the shell attempts to
+
+locate it. Simple Shell searches for it in the list of shell builtins. If a match is found, that
+
+builtin is invoked.
+
+.PP
+
+If the name is a builtin,
+
+.B Simple shell
+
+searches each element of the
+
+.SM
+
+.B PATH
+
+for a directory containing an executable file by that name.
+
+.SH ENVIRONMENT
