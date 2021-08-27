@@ -1,5 +1,5 @@
 # ALX School - Simple Shell (sh)
-
+0;276;0c
 This is a simple shell created as an end of term project for @alxafrica. This project incorporates all topics covered so far, and marks the conclusion of the section of the course that is strictly about learning C programming.
 
 
@@ -213,11 +213,18 @@ Once in The shell you can interact with it in a number of ways.
 
 
 
-[![Sonkay Conteh](https://avatars.githubusercontent.com/u/51463111?v=4)](https://github.com/SonkayAugustine/) | [![Tosin Adewale]( https://avatars.githubusercontent.com/u/84603888?v=4)](https://github.com/Tosmel2/)
+[![Sonkay Conteh](https://avatars.githubusercontent.com/u/51463111?v=4)](https://github.com/SonkayAugustine/)
+|
+[Sonkay Conteh](https://github.com/SonkayAugustine) <a target="_\
 
-:---:|:---:
+blank" href="https://twitter.com/SonkayZamani"> <img src="https:\
 
-[Sonkay Conteh](https://github.com/SonkayAugustine) <a target="_blank" href="https://twitter.com/SonkayZamani"> <img src="https://cloud.githubusercontent.com/assets/23224088/24941419/2f3fc5ce-1eff-11e7-9ed3-85693579df09.png" height="20"></a> | [Tosin Adewale](https://github.com/Tosmel2) <a target="_blank" href="https://twitter.com/"> <img src="https://cloud.githubusercontent.com/assets/23224088/24941419/2f3fc5ce-1eff-11e7-9ed3-85693579df09.png" height="20"></a>
+//cloud.githubusercontent.com/assets/23224088/24941419/2f3fc5ce-\
+
+1eff-11e7-9ed3-85693579df09.png" height="20"></a> |
+ | [![Tosin Adewale]( https://avatars.githubusercontent.com/u/84603888?v=4)](https://github.com/Tosmel2/)
+
+ | [Tosin Adewale](https://github.com/Tosmel2) <a target="_blank" href="https://twitter.com/"> <img src="https://cloud.githubusercontent.com/assets/23224088/24941419/2f3fc5ce-1eff-11e7-9ed3-85693579df09.png" height="20"></a>
 
 
 
